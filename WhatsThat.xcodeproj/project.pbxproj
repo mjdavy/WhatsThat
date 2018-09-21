@@ -14,6 +14,7 @@
 		40D0084421552F4600EAB180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D0084221552F4600EAB180 /* LaunchScreen.storyboard */; };
 		40D0084F21552F4600EAB180 /* WhatsThatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0084E21552F4600EAB180 /* WhatsThatTests.swift */; };
 		40D0085A21552F4600EAB180 /* WhatsThatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0085921552F4600EAB180 /* WhatsThatUITests.swift */; };
+		40D008682155494C00EAB180 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40D008672155494C00EAB180 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		40D0085521552F4600EAB180 /* WhatsThatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsThatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D0085921552F4600EAB180 /* WhatsThatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsThatUITests.swift; sourceTree = "<group>"; };
 		40D0085B21552F4600EAB180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D008672155494C00EAB180 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		40D0082D21552F4400EAB180 = {
 			isa = PBXGroup;
 			children = (
+				40D008672155494C00EAB180 /* Inceptionv3.mlmodel */,
 				40D0083821552F4500EAB180 /* WhatsThat */,
 				40D0084D21552F4600EAB180 /* WhatsThatTests */,
 				40D0085821552F4600EAB180 /* WhatsThatUITests */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40D0083C21552F4500EAB180 /* ViewController.swift in Sources */,
+				40D008682155494C00EAB180 /* Inceptionv3.mlmodel in Sources */,
 				40D0083A21552F4500EAB180 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

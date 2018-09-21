@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gus-DR-e9P">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,44 +14,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsThat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAQ-uc-pSm">
-                                <rect key="frame" x="139" y="548" width="42" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLY-V3-p1o">
-                                <rect key="frame" x="10.5" y="166.5" width="299" height="299"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="299" id="aP4-K8-1Ei"/>
-                                    <constraint firstAttribute="height" constant="299" id="x4b-XU-WXa"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lVU-Q8-ytB">
+                                <rect key="frame" x="38" y="193" width="299" height="480"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLY-V3-p1o">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="299"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="299" id="aP4-K8-1Ei"/>
+                                            <constraint firstAttribute="height" constant="299" id="x4b-XU-WXa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-ml-GO7">
+                                        <rect key="frame" x="0.0" y="299" width="299" height="181"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qAQ-uc-pSm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2VH-bY-V72"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qAQ-uc-pSm" secondAttribute="bottom" id="SEE-18-CHu"/>
-                            <constraint firstItem="cLY-V3-p1o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bxU-rC-yyn"/>
-                            <constraint firstItem="cLY-V3-p1o" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lUD-Ge-6zU"/>
+                            <constraint firstItem="lVU-Q8-ytB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Fxd-SF-JLz"/>
+                            <constraint firstItem="lVU-Q8-ytB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="GV6-Vv-3Hg"/>
+                            <constraint firstItem="lVU-Q8-ytB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lgs-hp-mdx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="What's That?" id="Wfa-Oz-qSB">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="OOg-g5-Wmj"/>
-                        <barButtonItem key="rightBarButtonItem" title="Library" id="nC8-hd-FoA"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="OOg-g5-Wmj">
+                            <connections>
+                                <action selector="camera:" destination="BYZ-38-t0r" id="WL5-1w-nxx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Library" id="nC8-hd-FoA">
+                            <connections>
+                                <action selector="openLibrary:" destination="BYZ-38-t0r" id="gal-JT-KcQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="classifier" destination="qAQ-uc-pSm" id="Dif-2a-iQ8"/>
+                        <outlet property="classifier" destination="C6P-ml-GO7" id="FT4-xU-hw6"/>
                         <outlet property="imageView" destination="cLY-V3-p1o" id="GgB-7S-i87"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="129"/>
+            <point key="canvasLocation" x="564" y="128.57142857142858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QY2-J0-GA5">
@@ -59,7 +75,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gus-DR-e9P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vDU-ON-JVp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
